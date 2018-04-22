@@ -1,0 +1,12 @@
+#my-tools{
+    min-height: 100vh;
+    background-color: $grey;
+    text-align: center;
+    #job-name{
+        @media (max-width: 600px){
+            width: 100%
+        }
+    }
+    
+}
+

@@ -4,10 +4,12 @@
 //  dependencies
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
+import vueSmoothScroll from 'vue-smooth-scroll'
 
 //  components
 import App from './App'
 import Navigation from './components/Header'
+import ContactForm from './components/contactme'
 
 //  css files
 import 'bootstrap/dist/css/bootstrap.css'
@@ -16,12 +18,14 @@ import './scss/styles.scss'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
+Vue.use(vueSmoothScroll)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   components: {
     App,
-    Navigation
+    Navigation,
+    ContactForm
   }
 })

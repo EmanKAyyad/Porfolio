@@ -1,8 +1,38 @@
+#name-animate {
+    height: 100vh;
+    background: #108090;
+    position: relative;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #108090 0%, #374353 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #108090 0%, #374353 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #108090 0%, #374353 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#108090', endColorstr='#374353', GradientType=0);
+    /* IE6-9 */
+    svg.name {
+        top: calc(50vh - 125px);
+        position: absolute;
+
+    }
+    
+    .goDown{
+        border: 1px solid #fff;
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 5px);
+        text-align: center;
+        width: 30px;
+        height: 30px;
+    }
+}
+
 path#Eman_Ayyad {
     stroke-dasharray: 4;
     fill-opacity: 0;
     stroke-opacity: 0;
-    stroke: black;
+    stroke: #fff;
     stroke-width: 1px;
     animation-name: fade, drawWithDashes, fillAndGrow;
     animation-delay: 0s, 0.5s, 1s;
@@ -14,21 +44,70 @@ path#Eman_Ayyad {
     transform-origin: center;
 }
 
-@keyframes fade{
-    to{
+#stars {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#reference-star {
+    display: none;
+}
+
+.star {
+    fill: #faff6b;
+    fill-rule: evenodd;
+    position: absolute;
+
+    &.shadow {
+        opacity: 0.5;
+        animation: starSparkle;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-direction: cubic-bezier(0,0.99,0,0.99);
+        animation-iteration-count: infinite;
+        &:nth-child(5n+0) {
+            animation-delay: 3s;
+        }
+        &:nth-child(5n+1) {
+            animation-delay: 5s;
+        }        
+        &:nth-child(5n+2) {
+            animation-delay: 7s;
+        }        
+        &:nth-child(5n+3) {
+            animation-delay: 9s;
+        }        
+        &:nth-child(5n+4) {
+            animation-delay: 11s;
+        }
+
+    }
+}
+
+@keyframes fade {
+    to {
         stroke-opacity: 1;
     }
 }
 
-@keyframes drawWithDashes{
-    to{
+@keyframes drawWithDashes {
+    to {
         stroke-dasharray: 1500;
     }
 }
 
-@keyframes fillAndGrow{
-    to{
+@keyframes fillAndGrow {
+    to {
         fill-opacity: 1;
         transform: scale(0.82);
+    }
+}
+
+@keyframes starSparkle {
+    20%,100% {
+        transform: scale(4);
+        opacity: 0
     }
 }

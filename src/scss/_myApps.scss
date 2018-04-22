@@ -1,0 +1,46 @@
+#my-apps {
+    min-height: 100vh;
+    padding: 60px 0;
+    text-align: center;
+
+    .thumbnail {
+        height: 300px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        font-size: 0;
+        h5 {
+            color: $greyBlue;
+        }
+        a {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+        .overlay{
+            background-color: rgba(0,0,0,0.7);
+            height: 100%;
+            width: 100%;
+            font-size: 20px;
+            transition: 0.3s all ease-in-out;
+            padding: 20px;
+            p{
+                color: $yellow;
+            }
+        }
+        &:hover{
+            .overlay{
+                transform: translateY(-100%);
+            }
+        }
+    }
+    
+    .col-12.col-md-6:first-of-type .thumbnail {
+        background-image: url('../../src/assets/bitcoin.jpg');
+        background-size: cover;
+    }    
+    
+    .col-12.col-md-6:nth-of-type(2) .thumbnail {
+        background-image: url('../../src/assets/typing.jpg');
+        background-size: cover;
+    }
+}
