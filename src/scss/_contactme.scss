@@ -1,0 +1,81 @@
+#contact-form{
+    min-height: 100vh;
+    padding-top: 100px;
+    background-color: #fff;
+    text-align: center;
+    
+    form , .message-sent{
+        max-height: 0;
+        transition: 0.2s all ease-in-out;
+        overflow: hidden;
+    }
+    
+    .message-sent>p {
+        border: 1px solid $cyan;
+        margin-bottom: 0;
+        display: inline-block;
+        color: $greyBlue;
+    }
+    
+    form.expanded , .message-sent.expanded{
+        max-height: 700px;
+    }
+
+    
+    h2 {
+        color: $blue;
+        margin-bottom: 50px;
+        text-transform: capitalize;
+    }
+
+    h2::after,
+    h2::before {
+        content: "";
+        display: inline-block;
+        width: 100px;
+        height: 1px;
+        background-color: $blue;
+        margin: 0 15px 10px;
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+    
+    input,textarea{
+        background-color: transparent;
+        border: 1px solid $yellow;
+        color: #777;
+        &:focus{
+            outline: none;
+        }
+    }
+    .label{
+        padding: 0px 20px;
+        background-color: #fff;
+        position: absolute;
+        top: -12px;
+        left: 50px;
+        text-transform: capitalize;
+        color: $greyBlue;
+    }
+    
+    #submit{
+        background-color: transparent;
+        border: 1px solid $blue;
+        padding: 15px 40px;
+        border-radius: 50px;
+        color: $blue;
+        clear: both;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+        
+        &:hover{
+            background-color: $blue;
+            color: #fff;
+        }
+        
+        &:focus{
+            outline: none;
+        }
+    }
+}

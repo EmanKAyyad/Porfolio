@@ -1,44 +1,63 @@
 #my-apps {
-    min-height: 100vh;
-    padding: 60px 0;
     text-align: center;
+    box-sizing: border-box;
 
+    h2::after,
+    h2::before {
+        content: "";
+        display: inline-block;
+        width: 100px;
+        height: 1px;
+        background-color: $blue;
+        margin: 0 15px 10px;
+        @media (max-width: 576px){
+            display: none;
+        }
+
+    }
     .thumbnail {
         height: 300px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         overflow: hidden;
         font-size: 0;
-        h5 {
-            color: $greyBlue;
-        }
         a {
             display: inline-block;
             height: 100%;
             width: 100%;
+            text-decoration: none;
         }
-        .overlay{
-            background-color: rgba(0,0,0,0.7);
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
             height: 100%;
             width: 100%;
             font-size: 20px;
             transition: 0.3s all ease-in-out;
             padding: 20px;
-            p{
-                color: $yellow;
+            transform: translateY(100%);
+
+            p {
+                color: #fff;
+                height: 100%;
+                border: 1px solid #fff;
+                text-align: justify;
             }
         }
-        &:hover{
-            .overlay{
-                transform: translateY(-100%);
+        &:hover {
+            .overlay {
+                transform: translateY(0);
             }
         }
     }
-    
+    h5 {
+        color: $greyBlue;
+        font-weight: 600;
+    }
+
     .col-12.col-md-6:first-of-type .thumbnail {
         background-image: url('../../src/assets/bitcoin.jpg');
         background-size: cover;
-    }    
-    
+    }
+
     .col-12.col-md-6:nth-of-type(2) .thumbnail {
         background-image: url('../../src/assets/typing.jpg');
         background-size: cover;

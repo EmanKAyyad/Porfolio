@@ -1,21 +1,23 @@
 <template>
-   <div class="container">
-        <h1 class="mt-5 mb-3 text-center">Word Counter</h1>
-        <section class="mt-5 row" id="counters">
-            <div class="counter-container col-4 text-center" id="character-counter">
-                <h2 class="display-4 text-info">{{characters}}</h2>
-                <p class="mt-1 text-info text-uppercase">Character</p>
-            </div>
-            <div class="counter-container col-4 text-center" id="word-counter">
-                <h2 class="display-4 text-info">{{words}}</h2>
-                <p class="mt-1 text-info text-uppercase">Word</p>
-            </div>
-            <div class="counter-container col-4 text-center" id="sentence-counter">
-                <h2 class="display-4 text-info">{{sentences}}</h2>
-                <p class="mt-1 text-info text-uppercase">Sentence</p>
-            </div>
-        </section>
-        <section id="text-area" class="row mt-5"><textarea class="offset-1 col-10" @keyup="countAll" v-model="myInput"></textarea></section>
+   <div id="word-counter-section">
+       <div class="container">
+            <h2 class="py-5 text-center">Word Counter</h2>
+            <section class="mt-5 row" id="counters">
+                <div class="counter-container col-4 text-center" id="character-counter">
+                    <h4 class="display-4">{{characters}}</h4>
+                    <p class="mt-1 text-uppercase">Character</p>
+                </div>
+                <div class="counter-container col-4 text-center" id="word-counter">
+                    <h4 class="display-4">{{words}}</h4>
+                    <p class="mt-1 text-uppercase">Word</p>
+                </div>
+                <div class="counter-container col-4 text-center" id="sentence-counter">
+                    <h4 class="display-4">{{sentences}}</h4>
+                    <p class="mt-1 text-uppercase">Sentence</p>
+                </div>
+            </section>
+            <section id="text-area" class="row mt-5"><textarea class="offset-1 col-10" @keyup="countAll" v-model="myInput"></textarea></section>
+        </div>
     </div>
 </template>
 <script>

@@ -21,6 +21,9 @@ nav.stick {
 
     li.menu-item a {
         color: $greyBlue;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
     }
 
     li.menu-item .hover-effect::before {
@@ -70,6 +73,10 @@ li.menu-item {
         color: #fff;
         font-family: 'open sans';
     }
+}
+
+body.cryptocurrency-page nav li.menu-item a{
+    color: $greyBlue;
 }
 
 svg.logo {

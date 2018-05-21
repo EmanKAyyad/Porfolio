@@ -1,0 +1,29 @@
+footer{
+    background-color: $greyBlue;
+    color: #fff;
+    
+    p{
+        margin-bottom: 0;
+        padding: 10px;
+        
+        span{
+            color: $yellow;
+        }
+    }
+    
+    svg{
+        fill: #fff;
+    }
+    a{
+        display: inline-block;
+        margin: 0 5px;
+        img{
+            width: 30px;
+        }
+    }
+    
+    .social-profile{
+        align-items: flex-start;
+        justify-content: center;
+    }
+}

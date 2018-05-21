@@ -1,16 +1,18 @@
 <template>
   <div class="core">
       <homepage-hero></homepage-hero>
-      <tools></tools>
+      <about-me></about-me>
       <my-apps></my-apps>
+      <contact-form></contact-form>
   </div>
 </template>
 <script>
 import AOS from 'aos'
 
 import homepageHero from './components/HomepageHero'
-import tools from './components/tools'
+import aboutMe from './components/aboutme'
 import myApps from './components/MyApps'
+import contactForm from './components/contactme'
 
 export default {
 
@@ -25,8 +27,9 @@ export default {
   name: 'App',
   components: {
     homepageHero,
-    tools,
-    myApps
+    aboutMe,
+    myApps,
+    contactForm
   }
 }
 

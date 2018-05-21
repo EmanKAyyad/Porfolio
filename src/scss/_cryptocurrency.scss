@@ -1,0 +1,109 @@
+#cryptocurrency-section {
+    padding-top: 100px;
+    min-height: 100vh;
+    background-color: #fff;
+    h2 {
+        color: $blue;
+        margin-bottom: 50px;
+        text-transform: capitalize;
+    }
+
+    h3 {
+        color: $blue;
+        text-align: center;
+    }
+    h3::before,
+    h3::after,
+    h2::after,
+    h2::before {
+        content: "";
+        display: inline-block;
+        width: 100px;
+        height: 1px;
+        background-color: $blue;
+        margin: 0 15px 10px;
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    button.getTopTen {
+        background-color: transparent;
+        border: 1px solid $yellow;
+        color: $yellow;
+        padding: 15px 40px;
+        border-radius: 50px;
+        display: block;
+        font-size: 20px;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+        &:hover {
+            background-color: $yellow;
+            color: #fff;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .top-ten-screen {
+        margin-top: 50px;
+    }
+
+    h4 {
+        color: $greyBlue;
+        font-size: 20px;
+    }
+
+    p.usd-price {
+        color: maroon;
+        padding: 0;
+
+        &:before {
+            content: "$";
+            padding-right: 5px;
+        }
+    }
+    p.btc-price{
+        padding: 0;
+        color: $cyan;
+        clear: right;
+    }
+    .searchCurrencies {
+        position: relative;
+        text-align: center;
+    }
+    
+    .searchCurrencies>input{
+        width: 300px;
+        padding: 5px;
+        margin-top: 20px;
+    }
+    ul.suggestedCurrencyList {
+        position: absolute;
+        top: 50px;
+        z-index: 1;
+        left: -webkit-calc(50% - 200px);
+        left: calc(50% - 200px);
+        width: 400px;
+        margin: 10px auto 0;
+        list-style: none;
+        padding-left: 0;
+        height: 315px;
+        overflow-y: auto;
+    }
+
+    .suggested-currency {
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+        background-color: #fff;
+    }
+
+    .suggested-currency:hover {
+        background-color: #50bfbf;
+        color: #fff;
+    }
+}
