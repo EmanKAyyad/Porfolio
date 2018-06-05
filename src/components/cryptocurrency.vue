@@ -1,6 +1,6 @@
 <template>
     <section id="cryptocurrency-section">
-       <div class="container">
+       <div class="container py-5">
             <h2 class="text-center">Get info about cryptocurrencies Now!</h2>
             <button class="getTopTen" @click="getTop10">get top 10 currencies</button>
             <top-ten :topTen="topTenCurrency"></top-ten>
@@ -20,11 +20,9 @@
                             @click="showDetails">{{ currency.name }}</li>
                     </ul>
                 </div>
-                <div id="specificCurrencyData" class="row mt-5">
+                <div id="specificCurrencyData" class="row py-5">
                     <div
-                      class="single-currency-data col-12 col-sm-6 col-md-4 col-lg-3"
-                      data-aos="fade-down"
-                      data-aos-duration="300"
+                      class="single-currency-data col-12 col-sm-6 col-md-4 col-lg-3 mb-4 pl-3 pr-5"
                       v-if="clickedCurrency.length !== 0"
                       v-for="currency in clickedCurrency"
                       :key = "currency.name + currency.id">

@@ -1,7 +1,7 @@
 #cryptocurrency-section {
     padding-top: 100px;
     min-height: 100vh;
-    background-color: #fff;
+    background-color: #eee;
     h2 {
         color: $blue;
         margin-bottom: 50px;
@@ -53,6 +53,19 @@
         margin-top: 50px;
     }
 
+    .single-currency {
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        animation-name: fade-down;
+        animation-duration: 0.3s;
+        animation-delay: 0;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+    }
+
     h4 {
         color: $greyBlue;
         font-size: 20px;
@@ -67,7 +80,7 @@
             padding-right: 5px;
         }
     }
-    p.btc-price{
+    p.btc-price {
         padding: 0;
         color: $cyan;
         clear: right;
@@ -76,8 +89,8 @@
         position: relative;
         text-align: center;
     }
-    
-    .searchCurrencies>input{
+
+    .searchCurrencies > input {
         width: 300px;
         padding: 5px;
         margin-top: 20px;
@@ -105,5 +118,25 @@
     .suggested-currency:hover {
         background-color: #50bfbf;
         color: #fff;
+    }
+
+    .single-currency-data {
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        animation-name: fade-down;
+        animation-duration: 0.3s;
+        animation-delay: 0;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+    }
+}
+
+@keyframes fade-down {
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

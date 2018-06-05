@@ -2,7 +2,7 @@
     <div id="contact-form">
         <div class="container">
             <h2 data-aos="fade-up">Contact Me</h2>
-            <form action="" @submit.prevent="submitForm" :class="{ expanded : submitFormOpen}">
+            <form action="" :class="{ expanded : submitFormOpen}">
                 <div class="row">
                     <div class="col-md-8 offset-md-2 my-3"  data-aos="fade-right" data-aos-delay="200">
                         <input class="w-100 p-2" type="text" v-model="name"  required>
@@ -40,47 +40,8 @@ export default{
     }
   },
   methods: {
-    submitForm () {
-      this.ses.sendEmail({
-        Destination: {
-          ToAddresses: ['eman_khalifa_ayyad@hotmail.com']
-        },
-        Message: {
-          Body: {
-            Html: {
-              Charset: 'UTF-8',
-              Data: 'this message is from : ' + this.name + '<br >' + 'the message sent is : ' + this.message + '<br >' + ' their email is : ' + this.email
-            },
-            Text: {
-              Charset: 'UTF-8',
-              Data: 'This is the message body in text format.'
-            }
-          },
-          Subject: {
-            Charset: 'UTF-8',
-            Data: 'A message from my contact form'
-          }
-        },
-        ReturnPath: 'eman_khalifa_ayyad@hotmail.com',
-        Source: 'eman_khalifa_ayyad@hotmail.com'
-      }, (err, data) => {
-        if (err) console.log(err, err.stack)
-        else {
-          console.log(data)
-          this.submitFormOpen = false
-        }
-      })
-    }
   },
   mounted () {
-    const AWS = require('aws-sdk')
-
-    AWS.config.update({
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-      region: 'eu-west-1'})
-    this.ses = new AWS.SES()
-  }
 }
 
 </script>

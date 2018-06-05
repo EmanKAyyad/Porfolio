@@ -32,7 +32,7 @@ export default{
       let newStar = this.$refs.star.cloneNode(true)
       newStar.removeAttribute('id')
       newStar.style.top = Math.round(Math.random() * 95) + 5 + '%'
-      newStar.style.left = Math.round(Math.random() * 95) + 5 + '%'
+      newStar.style.left = Math.round(Math.random() * 90) + 5 + '%'
       document.getElementById('stars').appendChild(newStar)
       let Shadow = newStar.cloneNode(true)
       Shadow.classList.add('shadow')
